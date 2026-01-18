@@ -12,10 +12,10 @@ defaults write com.codeweavers.CrossOver SULastCheckTime -date"${DATETIME}"
 killall cfprefsd
 
 echo "🧹 Cleaning bottle flags..."
-find "$HOME/Library/Application Support/CrossOver/Bottles" -type f \( -name ".eval" -o -name ".update-timestamp" \) -execrm -f "{}" +
+find "$HOME/Library/Application Support/CrossOver" -type f \( -name ".eval" -o -name ".update-timestamp" \) -execrm -f "{}" +
 
 echo "🧽 Cleaning cxoffice registry block..."
-find "$HOME/Library/Application Support/CrossOver/Bottles" -name system.reg -exec sed -i '''/cxoffice/{N;N;N;N;d;}' {} \;
+find "$HOME/Library/Application Support/CrossOver" -name system.reg -exec sed -i '''/cxoffice/{N;N;N;N;d;}' {} \;
 
 echo "🚀 Restarting CrossOver..."
 CO_APP_PATH="/Applications/CrossOver.app/Contents/MacOS"
