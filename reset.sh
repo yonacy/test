@@ -21,4 +21,4 @@ echo "🚀 Restarting CrossOver..."
 CO_APP_PATH="/Applications/CrossOver.app/Contents/MacOS"
 "$CO_APP_PATH/CrossOver" >> /tmp/co_log.log 2>&1 &
 
-echo "🎉 Done! Trial reset applied successfully."
+echo "🎉 Done! Trial reset applied successfully."
